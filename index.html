@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚢 Battleship Game</h1>
+            <div class="game-status">
+                <p id="game-message">Click on the enemy board to attack!</p>
+                <button id="new-game-btn">New Game</button>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="player-section">
+                <h2>Your Fleet</h2>
+                <div class="board-container">
+                    <div id="player-board" class="game-board"></div>
+                </div>
+            </div>
+
+            <div class="enemy-section">
+                <h2>Enemy Waters</h2>
+                <div class="board-container">
+                    <div id="enemy-board" class="game-board clickable"></div>
+                </div>
+            </div>
+        </main>
+
+        <div class="ship-placement" id="ship-placement">
+            <h3>Place Your Ships</h3>
+            <div class="ship-controls">
+                <div class="ship-info">
+                    <span id="current-ship">Carrier (5 spaces)</span>
+                    <button id="rotate-btn">Rotate</button>
+                </div>
+                <div class="orientation">
+                    <span>Orientation: <span id="orientation-display">Horizontal</span></span>
+                </div>
+            </div>
+            <p>Click on your board to place ships</p>
+        </div>
+    </div>
+
+    <!-- Load scripts in order without ES modules -->
+    <script src="src/ship.js"></script>
+    <script src="src/gameboard.js"></script>
+    <script src="src/player.js"></script>
+    <script src="src/gameController.js"></script>
+    <script src="src/index.js"></script>
+</body>
+</html>
